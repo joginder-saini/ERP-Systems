@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iLife ERP Login</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <img src="logo.png" alt="iLife Logo" width="100">
+        <h2>Welcome iLife ERP Systems</h2>
+        <form action="dashboard.html" method="post" onsubmit="return validateLogin()">
+            <input type="text" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <p style="margin-top: 10px;"><a href="#" style="color: #1abc9c;">Forgot password?</a></p>
+    </div>
+    <script>
+        function validateLogin() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            if (email === "test@example.com" && password === "123456") {
+                return true;
+            } else {
+                alert("Invalid email or password!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
